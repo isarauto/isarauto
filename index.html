@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" data-meta="home">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Location Voiture Tanger — Isar Auto Location | Modèles 2025 dès 300 MAD</title>
+<meta name="description" content="Location de voiture à Tanger : véhicules 2025 impeccables dès 300 MAD/jour, livraison à l'aéroport Tanger Ibn Battouta et en ville. Réservation rapide sur WhatsApp." />
+<link rel="canonical" href="https://isarauto.com/" />
+<link rel="alternate" hreflang="fr" href="https://isarauto.com/" />
+<link rel="alternate" hreflang="en" href="https://isarauto.com/car-rental-tangier/" />
+<link rel="alternate" hreflang="es" href="https://isarauto.com/alquiler-coches-tanger/" />
+<link rel="alternate" hreflang="ar" href="https://isarauto.com/ar/" />
+<link rel="alternate" hreflang="de" href="https://isarauto.com/autovermietung-tanger/" />
+<link rel="alternate" hreflang="nl" href="https://isarauto.com/autoverhuur-tanger/" />
+<link rel="alternate" hreflang="x-default" href="https://isarauto.com/" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Location Voiture Tanger — Isar Auto Location" />
+<meta property="og:description" content="Véhicules 2025 dès 300 MAD/jour. Livraison aéroport Tanger Ibn Battouta & ville. Réservez sur WhatsApp." />
+<meta property="og:image" content="https://isarauto.com/uploads/isar-logo.png" />
+<meta property="og:url" content="https://isarauto.com/" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Oswald:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="anonymous"></script>
+<script src="image-slot.js"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AutoRental","name":"Isar Auto Location","image":"https://isarauto.com/uploads/isar-logo.png","url":"https://isarauto.com/","telephone":"+212616070870","priceRange":"300–350 MAD / jour","address":{"@type":"PostalAddress","addressLocality":"Tanger","addressCountry":"MA"},"geo":{"@type":"GeoCoordinates","latitude":35.758938,"longitude":-5.854562},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"11:00","closes":"18:00"},"sameAs":["https://wa.me/212616070870"]}
+</script>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="logo" href="#top" aria-label="Isar Auto Location">
+      <img class="crest-img" src="uploads/isar-logo.png" alt="Isar Auto" />
+      <span>ISAR AUTO</span>
+    </a>
+    <nav class="nav">
+      <a href="#top" data-i18n="nav.home">Accueil</a>
+      <a href="#about" data-i18n="nav.about">Qui sommes-nous</a>
+      <a href="#fleet" data-i18n="nav.fleet">Nos voitures</a>
+      <a href="#contact" data-i18n="nav.contact">Contactez-nous</a>
+    </nav>
+    <div class="lang desktop">
+      <button class="lang-btn" aria-haspopup="true">
+        <span class="lang-current">FR</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="lang-menu" role="menu"></div>
+    </div>
+    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- mobile overlay -->
+<div class="nav-overlay">
+  <button class="ov-close" aria-label="Fermer">&times;</button>
+  <a href="#top" data-i18n="nav.home">Accueil</a>
+  <a href="#about" data-i18n="nav.about">Qui sommes-nous</a>
+  <a href="#fleet" data-i18n="nav.fleet">Nos voitures</a>
+  <a href="#contact" data-i18n="nav.contact">Contactez-nous</a>
+  <div class="ov-langs"></div>
+</div>
+
+<a id="top"></a>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-bg">
+    <image-slot id="hero-bg" src="cars/img/hero.webp" shape="rect" placeholder="Déposez une photo sombre & premium d'une voiture (paysage)"></image-slot>
+  </div>
+  <div class="hero-veil"></div>
+  <div class="wrap hero-inner">
+    <span class="hero-kicker kicker" data-i18n="hero.kicker">Location de voitures · Tanger</span>
+    <h1>
+      <span class="l1" data-i18n="hero.title1">L'élégance</span>
+      <span class="l2" data-i18n="hero.title2">prend la route.</span>
+    </h1>
+    <p class="hero-sub" data-i18n="hero.sub">Une flotte confidentielle de véhicules 2025, impeccablement entretenus. Un service de conciergerie pensé pour ceux qui exigent le meilleur — à Tanger et au-delà.</p>
+    <div class="hero-actions">
+      <a class="btn btn-gold" href="#fleet" data-i18n="hero.cta1">Découvrir la flotte</a>
+      <a class="btn btn-ghost" id="heroWa" href="#" target="_blank" rel="noopener" data-i18n="hero.cta2">Réserver sur WhatsApp</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><div class="n"><b>7</b></div><div class="l" data-i18n="stat.cars">Voitures d'exception</div></div>
+      <div class="hstat"><div class="n">2025</div><div class="l" data-i18n="stat.year">Modèles</div></div>
+      <div class="hstat"><div class="n">300 <span style="font-size:.5em;color:var(--muted)">MAD</span></div><div class="l" data-i18n="stat.from">À partir de / jour</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="sec about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-copy reveal">
+      <span class="kicker" data-i18n="about.kicker">Qui sommes-nous</span>
+      <h2 data-i18n="about.title">Une maison fondée sur la confiance.</h2>
+      <p class="about-lead" data-i18n="about.lead">Derrière Isar Auto Location, il y a Adil — et une certaine idée de l'hospitalité.</p>
+      <div class="about-body">
+        <p data-i18n="about.p1">Adil a bâti Isar Auto Location sur une conviction simple : louer une voiture devrait être aussi raffiné que la destination. Pas de comptoir, pas d'attente — un seul interlocuteur, disponible.</p>
+        <p data-i18n="about.p2">Chaque voiture est un modèle 2025, préparée avec soin avant chaque remise de clés. Un service discret, ponctuel et profondément humain.</p>
+      </div>
+      <div class="values">
+        <div class="value reveal reveal-l" style="transition-delay:.05s">
+          <div class="vi"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 13l2-7h14l2 7M5 13h14v5H5z"/><circle cx="8" cy="18" r="1.6"/><circle cx="16" cy="18" r="1.6"/></svg></div>
+          <h4 data-i18n="about.v1t">Service de conciergerie</h4>
+          <p data-i18n="about.v1d">Livraison et reprise du véhicule où vous le souhaitez dans Tanger.</p>
+        </div>
+        <div class="value reveal" style="transition-delay:.18s">
+          <div class="vi"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l2.6 6.3L21 9l-5 4.3L17.5 21 12 17l-5.5 4L8 13.3 3 9l6.4-.7z"/></svg></div>
+          <h4 data-i18n="about.v2t">Flotte 2025</h4>
+          <p data-i18n="about.v2d">Des véhicules récents, propres et entretenus sans compromis.</p>
+        </div>
+        <div class="value reveal reveal-r" style="transition-delay:.3s">
+          <div class="vi"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></div>
+          <h4 data-i18n="about.v3t">Disponibilité réelle</h4>
+          <p data-i18n="about.v3d">Un contact direct, par téléphone ou WhatsApp, de 11h à 18h.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FLEET ================= -->
+<section class="sec" id="fleet">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="kicker" data-i18n="fleet.kicker">Nos voitures</span>
+      <h2><span class="gold-grad" data-i18n="fleet.title">La collection.</span></h2>
+      <p data-i18n="fleet.sub">Sept véhicules 2025 triés sur le volet. Faites défiler, puis réservez celui qui vous ressemble.</p>
+    </div>
+  </div>
+  <div class="coverflow" id="fleetCF" data-spread="248">
+    <div class="cf-stage" id="fleetStage"></div>
+    <button class="cf-arrow cf-prev" aria-label="Prev"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <button class="cf-arrow cf-next" aria-label="Next"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 18l6-6-6-6"/></svg></button>
+  </div>
+  <div class="wrap"><div class="cf-dots"></div></div>
+</section>
+
+<hr class="rule" />
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="sec" id="testimonials">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="kicker" data-i18n="tst.kicker">Ils nous ont fait confiance</span>
+      <h2 data-i18n="tst.title">La parole à nos clients.</h2>
+    </div>
+  </div>
+  <div class="coverflow" id="tstCF" data-spread="200" style="height:clamp(360px,48vw,440px)">
+    <div class="cf-stage" id="tstStage"></div>
+    <button class="cf-arrow cf-prev" aria-label="Prev"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <button class="cf-arrow cf-next" aria-label="Next"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 18l6-6-6-6"/></svg></button>
+  </div>
+  <div class="wrap"><div class="cf-dots"></div></div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="sec contact" id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker" data-i18n="contact.kicker">Contactez-nous</span>
+      <h2 data-i18n="contact.title">Réservons votre prochaine route.</h2>
+      <p data-i18n="contact.sub">Nous répondons le plus vite sur WhatsApp. Ouvert tous les jours, de 11h à 18h.</p>
+    </div>
+    <div class="contact-grid reveal">
+      <div class="ci-list">
+        <a class="ci" id="ciWa" href="#" target="_blank" rel="noopener">
+          <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.892c0 2.096.546 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.582 0 11.94-5.359 11.943-11.893a11.821 11.821 0 00-3.487-8.413z"/></svg></span>
+          <span><span class="lb" data-i18n="contact.wa">WhatsApp</span><span class="vl">+212 616 070 870</span></span>
+        </a>
+        <a class="ci" href="tel:+212616070870">
+          <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
+          <span><span class="lb" data-i18n="contact.call">Téléphone</span><span class="vl">0616 070 870</span></span>
+        </a>
+        <div class="ci">
+          <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <span><span class="lb" data-i18n="contact.hours">Horaires</span><span class="vl sm" data-i18n="contact.hoursv">Tous les jours · 11h00 – 18h00</span></span>
+        </div>
+        <div class="ci">
+          <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <span><span class="lb" data-i18n="contact.loc">Adresse</span><span class="vl sm" data-i18n="contact.locv">Tanger, Maroc</span></span>
+        </div>
+      </div>
+      <div class="map-wrap">
+        <div id="mapCanvas" aria-label="Carte — Q45W+H6W, Tanger"></div>
+        <div class="map-card">
+          <div class="mc-txt">
+            <div class="nm">Isar Auto Location</div>
+            <div class="ad">Q45W+H6W, Tanger</div>
+          </div>
+          <a class="mc-btn" id="mapsLink" href="#" target="_blank" rel="noopener" title="Ouvrir dans Google Maps">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2"><path d="M14 4h6v6"/><path d="M20 4L11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg>
+          </a>
+          <a class="mc-btn mc-dir" id="dirLink" href="#" target="_blank" rel="noopener" title="Itinéraire">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#1a73e8"><path d="M21.7 11.3l-9-9a1 1 0 0 0-1.4 0l-9 9a1 1 0 0 0 0 1.4l9 9a1 1 0 0 0 1.4 0l9-9a1 1 0 0 0 0-1.4zM13 14.5V12h-3v3H8v-4a1 1 0 0 1 1-1h4V7.5L16.5 11 13 14.5z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a class="logo" href="#top"><img class="crest-img" src="uploads/isar-logo.png" alt="Isar Auto" /><span>ISAR AUTO</span></a>
+      <p data-i18n="foot.tag">Location de voitures d'exception à Tanger. Modèles 2025, service de conciergerie, un seul interlocuteur.</p>
+      <div class="socials">
+        <a href="https://wa.me/212616070870" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.892c0 2.096.546 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.582 0 11.94-5.359 11.943-11.893a11.821 11.821 0 00-3.487-8.413z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="tel:+212616070870" aria-label="Téléphone"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
+      </div>
+    </div>
+    <div class="foot-col">
+      <h5 data-i18n="foot.explore">Explorer</h5>
+      <a href="#about" data-i18n="nav.about">Qui sommes-nous</a>
+      <a href="#fleet" data-i18n="nav.fleet">Nos voitures</a>
+      <a href="#testimonials" data-i18n="tst.kicker">Avis clients</a>
+      <a href="#contact" data-i18n="nav.contact">Contactez-nous</a>
+    </div>
+    <div class="foot-col">
+      <h5 data-i18n="foot.reach">Nous joindre</h5>
+      <a href="https://wa.me/212616070870" target="_blank" rel="noopener">WhatsApp · +212 616 070 870</a>
+      <a href="tel:+212616070870">0616 070 870</a>
+      <p data-i18n="contact.hoursv">Tous les jours · 11h00 – 18h00</p>
+      <p data-i18n="contact.locv">Tanger, Maroc</p>
+    </div>
+  </div>
+  <div class="wrap foot-seo">
+    <a href="location-voiture-tanger/index.html">Location voiture Tanger</a>
+    <a href="car-rental-tangier/index.html">Car rental Tangier</a>
+    <a href="alquiler-coches-tanger/index.html">Alquiler de coches Tánger</a>
+    <a href="ar/index.html">تأجير سيارات طنجة</a>
+    <a href="autovermietung-tanger/index.html">Autovermietung Tanger</a>
+    <a href="autoverhuur-tanger/index.html">Autoverhuur Tanger</a>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© 2026 Isar Auto Location · isarauto.com</span>
+    <span><span data-i18n="foot.rights">Tous droits réservés.</span></span>
+    <span class="foot-sign">made with <span class="g">passion</span> by <a class="g sign-link" href="tel:+212675920379">soulaiman</a></span>
+  </div>
+</footer>
+
+<a class="fab" id="fab" href="https://wa.me/212616070870" target="_blank" rel="noopener">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.892c0 2.096.546 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.582 0 11.94-5.359 11.943-11.893a11.821 11.821 0 00-3.487-8.413z"/></svg>
+  <span data-i18n="hero.cta2">Réserver sur WhatsApp</span>
+</a>
+
+<script src="cars.js"></script>
+<script src="i18n.js"></script>
+<script>
+  // wire dynamic links once data is present
+  document.addEventListener("DOMContentLoaded", function(){
+    var wa = "https://wa.me/" + window.PHONE;
+    var heroWa = document.getElementById("heroWa");
+    var ciWa = document.getElementById("ciWa");
+    if(heroWa) heroWa.href = wa;
+    if(ciWa) ciWa.href = wa;
+    var ml = document.getElementById("mapsLink");
+    if(ml) ml.href = window.MAPS_LINK;
+    var dl = document.getElementById("dirLink");
+    if(dl) dl.href = "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent(window.MAPS_COORDS);
+
+    /* ---- Leaflet map (light, Google-like) ---- */
+    var el = document.getElementById("mapCanvas");
+    if(el && window.L){
+      var pos = window.MAPS_COORDS.split(",").map(Number);
+      var map = L.map(el, { center: pos, zoom: 14, scrollWheelZoom: false, attributionControl: true });
+      L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
+        maxZoom: 19,
+        subdomains: "abcd",
+        attribution: "&copy; OpenStreetMap &copy; CARTO"
+      }).addTo(map);
+      var pin = L.divIcon({
+        className: "isar-pin",
+        html: '<svg width="34" height="48" viewBox="0 0 34 48"><path d="M17 1C8.2 1 1 8.2 1 17c0 11.4 14.1 28.5 14.7 29.2a1.7 1.7 0 0 0 2.6 0C18.9 45.5 33 28.4 33 17 33 8.2 25.8 1 17 1z" fill="#EA4335" stroke="#B31412" stroke-width="1"/><circle cx="17" cy="17" r="6" fill="#7B1410"/></svg>',
+        iconSize: [34,48], iconAnchor: [17,46]
+      });
+      L.marker(pos, { icon: pin }).addTo(map)
+        .bindTooltip("Isar Auto Location", { permanent: true, direction: "right", offset: [14,-26], className: "isar-pin-label" });
+    }
+  });
+</script>
+<script src="main.js"></script>
+
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" fill="#000000"/>
+    <text x="50" y="60" font-family="Georgia,serif" font-size="34" fill="#C9A24B" text-anchor="middle" letter-spacing="1">IA</text>
+  </svg>
+</template>
+</body>
+</html>
